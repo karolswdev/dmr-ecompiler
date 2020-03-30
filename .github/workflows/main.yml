@@ -19,11 +19,8 @@ jobs:
       steps:
           - uses: actions/checkout@v2
           - name: 🐋 login to Docker
-            run: ci/1-docker-hub-login.sh
-            shell: bash
+            run: bash ./ci/1-docker-hub-login.sh
           - name: 👷 build docker image
-            run: ci/2-build-docker-image.sh
-            shell: bash
+            run: bash ./ci/2-build-docker-image.sh
           - name: 🐳 publish to Docker
-            run: ci/3-push-docker-image.sh
-            shell: bash
+            run: bash ./ci/3-push-docker-image.sh
