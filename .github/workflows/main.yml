@@ -22,5 +22,6 @@ jobs:
             run: bash ./ci/1-docker-hub-login.sh
           - name: 👷 build docker image
             run: bash ./ci/2-build-docker-image.sh
+            workdir: ./src
           - name: 🐳 publish to Docker
             run: bash ./ci/3-push-docker-image.sh
