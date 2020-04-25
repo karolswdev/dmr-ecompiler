@@ -1,4 +1,4 @@
-FROM ubuntu AS base
+FROM ubuntu:16.04 AS base
 COPY ./core-files /compiler
 WORKDIR /compiler
 FROM base as pol
